@@ -10,12 +10,16 @@ public class LevelScript : MonoBehaviour {
     public int BossDamage;
     public int BossHP;
     public GameObject Player;
+    public GameObject Boss;
     public Slider HealthBar;
     public Text CurrentHealth;
+
+    
 
 	// Use this for initialization
 	void Start ()
     {
+        FlotatingDamageControllerScript.Initialize();
         HealthBar.value = BossHP;
         AttackTime = AttackCD;
 	}
@@ -42,13 +46,14 @@ public class LevelScript : MonoBehaviour {
             AttackTime -= Time.deltaTime;
             if (AttackTime < 0)
             {
+                FlotatingDamageControllerScript.CreateFloatingText(PlayerDamage.ToString(), Boss.transform);
                 HealthBar.value -= PlayerDamage;
                 AttackTime = AttackCD;
+
             }
-
-            
         }
-
         CurrentHealth.text = HealthBar.value + " / " + BossHP + " HP";
     }
 }
+
+
