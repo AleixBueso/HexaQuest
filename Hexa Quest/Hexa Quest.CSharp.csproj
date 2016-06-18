@@ -63,11 +63,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Hexa Quest.CSharp.Plugins.csproj">
+      <Project>{5D02E965-8763-61F3-23EC-9983096C8B5D}</Project>
+      <Name>Hexa Quest.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\FlotatingDamageControllerScript.cs" />
     <Compile Include="Assets\Scripts\FlotatingDamageScript.cs" />
     <Compile Include="Assets\Scripts\HealthBarScript.cs" />
     <Compile Include="Assets\Scripts\LevelScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

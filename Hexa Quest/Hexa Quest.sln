@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hexa Quest.CSharp.Plugins", "Hexa Quest.CSharp.Plugins.csproj", "{5D02E965-8763-61F3-23EC-9983096C8B5D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hexa Quest.CSharp", "Hexa Quest.CSharp.csproj", "{5FB42BCB-A4E6-2B1E-3A88-081590565478}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D02E965-8763-61F3-23EC-9983096C8B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D02E965-8763-61F3-23EC-9983096C8B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D02E965-8763-61F3-23EC-9983096C8B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D02E965-8763-61F3-23EC-9983096C8B5D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5FB42BCB-A4E6-2B1E-3A88-081590565478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5FB42BCB-A4E6-2B1E-3A88-081590565478}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FB42BCB-A4E6-2B1E-3A88-081590565478}.Release|Any CPU.ActiveCfg = Release|Any CPU
