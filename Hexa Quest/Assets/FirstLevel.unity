@@ -525,6 +525,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -537,6 +538,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2037483508}
   - {fileID: 2092510554}
@@ -721,6 +723,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2037483508}
   m_RootOrder: 0
@@ -1630,6 +1633,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0828874, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1701454166}
   m_RootOrder: 0
@@ -2411,6 +2415,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31c12c2a6169c7c4aa531ea6134bbb9c, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1156264933 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 194398, guid: 6a6dfc8cd6588274e8f47e0b4d2dbf1a, type: 2}
+  m_PrefabInternal: {fileID: 788682237}
 --- !u!1001 &1157538855
 Prefab:
   m_ObjectHideFlags: 0
@@ -3047,7 +3055,7 @@ MonoBehaviour:
   BossDamage: 1
   BossHP: 50
   Player: {fileID: 1801329175}
-  Boss: {fileID: 0}
+  Boss: {fileID: 1156264933}
   HealthBar: {fileID: 2037483509}
   CurrentHealth: {fileID: 2092510555}
   tile_1: {fileID: 2037551864}
@@ -3060,9 +3068,10 @@ Transform:
   m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
 --- !u!1001 &1473955692
 Prefab:
   m_ObjectHideFlags: 0
@@ -3379,6 +3388,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 655086806}
   m_Father: {fileID: 2037483508}
@@ -3609,6 +3619,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: -17.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1963043102}
   m_Father: {fileID: 0}
@@ -3992,6 +4003,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.46, z: -5.14}
   m_LocalScale: {x: 0.25226948, y: 0.2522696, z: 0.2522696}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1801329179}
   m_RootOrder: 0
@@ -4094,6 +4106,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.510673, y: 2.5106735, z: 2.5106735}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 210522267}
   - {fileID: 1701454166}
@@ -4176,9 +4189,10 @@ Transform:
   m_LocalRotation: {x: -0.0000000018626451, y: -0.5, z: 0.000000007450581, w: 0.86602545}
   m_LocalPosition: {x: 15, y: 2, z: -8.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
 --- !u!1001 &2076091834
 Prefab:
   m_ObjectHideFlags: 0
@@ -4385,6 +4399,7 @@ Transform:
   m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
   m_LocalPosition: {x: 56.9, y: 161.8, z: -87.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -4414,6 +4429,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4042681, y: 1.4042683, z: 1.4042683}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 168249987}
   m_RootOrder: 1
