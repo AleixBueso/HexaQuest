@@ -6,7 +6,9 @@ public class LevelScript : MonoBehaviour
 {
 
     public float AttackCD;
+    public float Evasion;
     float AttackTime;
+    float DodgeTime;
     public int PlayerDamage;
     public int BossDamage;
     public int BossHP;
@@ -14,46 +16,69 @@ public class LevelScript : MonoBehaviour
     public GameObject Boss;
     public Slider HealthBar;
     public Text CurrentHealth;
-    public GameObject tile_1;
 
-
+    //Tiles Logic
+    public GameObject[] Tiles;
+    int CurrentTile = 5;
 
     // Use this for initialization
     void Start()
     {
+        
         FlotatingDamageControllerScript.Initialize();
         HealthBar.value = BossHP;
         AttackTime = AttackCD;
+        DodgeTime = Evasion;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && DodgeTime <= 0)
         {
-            //iTween.MoveTo(Player, posició seguent tile, 0.5f);
-            //iTween.RotateTo(Player, new Vector3(0, -60, 0), 0.5f);
-            
-            Player.transform.Translate(new Vector3(15, 0, 17.32f / 2));
-            Player.transform.Rotate(new Vector3(0, -60, 0));
+            if (CurrentTile == 5)
+            {
+                iTween.MoveTo(Player, Tiles[0].transform.position, 0.5f);
+                CurrentTile = 0;
+            }
+
+            else
+                iTween.MoveTo(Player, Tiles[++CurrentTile].transform.position, 0.5f);
+            iTween.RotateAdd(Player, new Vector3(0, -60, 0), 0.5f);
 
             AttackTime = AttackCD;
+            DodgeTime = Evasion;
+
+            Debug.Log(CurrentTile);
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && DodgeTime <= 0)
         {
-            //iTween.RotateTo(Player, new Vector3(0, 60, 0), 0.5f);
-            //iTween.MoveTo(Player, posició anterior tile, 0.5f);
 
-            Player.transform.Rotate(new Vector3(0, 60, 0));
-            Player.transform.Translate(new Vector3(-15, 0, -17.32f / 2));
+            iTween.RotateAdd(Player, new Vector3(0, 60, 0), 0.5f);
+
+            if (CurrentTile == 0)
+            {
+                iTween.MoveTo(Player, Tiles[5].transform.position, 0.5f);
+                CurrentTile = 5;
+
+            }
+
+            else
+                iTween.MoveTo(Player, Tiles[--CurrentTile].transform.position, 0.5f);
 
             AttackTime = AttackCD;
+            DodgeTime = Evasion;
+
+            Debug.Log(CurrentTile);
         }
+
+       
 
         else
         {
             AttackTime -= Time.deltaTime;
+            DodgeTime -= Time.deltaTime;
             if (AttackTime < 0 || Input.GetKeyDown(KeyCode.Space))
             {
                 if (Boss)

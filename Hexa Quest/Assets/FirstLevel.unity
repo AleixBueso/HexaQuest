@@ -543,7 +543,7 @@ RectTransform:
   - {fileID: 2037483508}
   - {fileID: 2092510554}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1109,6 +1109,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31c12c2a6169c7c4aa531ea6134bbb9c, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &363398258 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+  m_PrefabInternal: {fileID: 651961446}
 --- !u!1001 &380873718
 Prefab:
   m_ObjectHideFlags: 0
@@ -1553,6 +1557,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31c12c2a6169c7c4aa531ea6134bbb9c, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &610785657 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+  m_PrefabInternal: {fileID: 651961446}
 --- !u!1001 &651961446
 Prefab:
   m_ObjectHideFlags: 0
@@ -1603,6 +1611,30 @@ Prefab:
     - target: {fileID: 400012, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
       propertyPath: m_LocalScale.z
       value: 6.497375
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+      propertyPath: m_Name
+      value: Tile_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+      propertyPath: m_Name
+      value: Tile_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+      propertyPath: m_Name
+      value: Tile_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+      propertyPath: m_Name
+      value: Tile_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+      propertyPath: m_Name
+      value: Tile_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+      propertyPath: m_Name
+      value: Tile_6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
@@ -1749,6 +1781,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31c12c2a6169c7c4aa531ea6134bbb9c, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &722285954 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+  m_PrefabInternal: {fileID: 651961446}
 --- !u!1001 &741989262
 Prefab:
   m_ObjectHideFlags: 0
@@ -2045,6 +2081,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a6dfc8cd6588274e8f47e0b4d2dbf1a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &853949814 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100006, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+  m_PrefabInternal: {fileID: 651961446}
 --- !u!1001 &971887344
 Prefab:
   m_ObjectHideFlags: 0
@@ -3051,6 +3091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackCD: 1
+  Evasion: 0.6
   PlayerDamage: 1
   BossDamage: 1
   BossHP: 50
@@ -3058,7 +3099,13 @@ MonoBehaviour:
   Boss: {fileID: 1156264933}
   HealthBar: {fileID: 2037483509}
   CurrentHealth: {fileID: 2092510555}
-  tile_1: {fileID: 2037551864}
+  Tiles:
+  - {fileID: 1985621509}
+  - {fileID: 722285954}
+  - {fileID: 610785657}
+  - {fileID: 853949814}
+  - {fileID: 363398258}
+  - {fileID: 1569349114}
 --- !u!4 &1459057846
 Transform:
   m_ObjectHideFlags: 0
@@ -3216,6 +3263,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31c12c2a6169c7c4aa531ea6134bbb9c, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1569349114 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100010, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+  m_PrefabInternal: {fileID: 651961446}
 --- !u!1001 &1596199900
 Prefab:
   m_ObjectHideFlags: 0
@@ -3623,7 +3674,7 @@ Transform:
   m_Children:
   - {fileID: 1963043102}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1001 &1840960052
 Prefab:
   m_ObjectHideFlags: 0
@@ -4000,13 +4051,17 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1963043097}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.46, z: -5.14}
+  m_LocalRotation: {x: 0.17320758, y: 0, z: 0, w: 0.98488533}
+  m_LocalPosition: {x: 0, y: 7.37, z: -7.09}
   m_LocalScale: {x: 0.25226948, y: 0.2522696, z: 0.2522696}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 19.9487, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1801329179}
   m_RootOrder: 0
+--- !u!1 &1985621509 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 1182c0e8ea3b04a3292c913205b49bd8, type: 3}
+  m_PrefabInternal: {fileID: 651961446}
 --- !u!1001 &2006364976
 Prefab:
   m_ObjectHideFlags: 0
@@ -4165,34 +4220,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!1 &2037551864
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2037551865}
-  m_Layer: 0
-  m_Name: Tile_1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2037551865
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2037551864}
-  m_LocalRotation: {x: -0.0000000018626451, y: -0.5, z: 0.000000007450581, w: 0.86602545}
-  m_LocalPosition: {x: 15, y: 2, z: -8.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
 --- !u!1001 &2076091834
 Prefab:
   m_ObjectHideFlags: 0
@@ -4402,7 +4429,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &2092510553
 GameObject:
   m_ObjectHideFlags: 0
