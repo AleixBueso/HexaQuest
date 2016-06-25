@@ -56,12 +56,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -82,6 +76,7 @@
     <Compile Include="Assets\Scripts\FlotatingDamageControllerScript.cs" />
     <Compile Include="Assets\Scripts\FlotatingDamageScript.cs" />
     <Compile Include="Assets\Scripts\HealthBarScript.cs" />
+    <Compile Include="Assets\Scripts\IABossScript.cs" />
     <Compile Include="Assets\Scripts\LevelScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />

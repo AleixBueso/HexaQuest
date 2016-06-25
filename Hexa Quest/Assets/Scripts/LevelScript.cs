@@ -19,7 +19,7 @@ public class LevelScript : MonoBehaviour
 
     //Tiles Logic
     public GameObject[] Tiles;
-    int CurrentTile = 5;
+    public int CurrentTile = 0;
 
     // Use this for initialization
     void Start()
@@ -38,12 +38,12 @@ public class LevelScript : MonoBehaviour
         {
             if (CurrentTile == 5)
             {
-                iTween.MoveTo(Player, Tiles[0].transform.position + new Vector3(0, 2, 0), 0.5f);
+                iTween.MoveTo(Player, Tiles[0].transform.position /*+ new Vector3(0, 2, 0)*/, 0.5f);
                 CurrentTile = 0;
             }
 
             else
-                iTween.MoveTo(Player, Tiles[++CurrentTile].transform.position + new Vector3(0, 2, 0), 0.5f);
+                iTween.MoveTo(Player, Tiles[++CurrentTile].transform.position /*+ new Vector3(0, 2, 0)*/, 0.5f);
             iTween.RotateAdd(Player, new Vector3(0, -60, 0), 0.5f);
 
             AttackTime = AttackCD;
@@ -59,13 +59,13 @@ public class LevelScript : MonoBehaviour
 
             if (CurrentTile == 0)
             {
-                iTween.MoveTo(Player, Tiles[5].transform.position + new Vector3(0, 2, 0), 0.5f);
+                iTween.MoveTo(Player, Tiles[5].transform.position /*+ new Vector3(0, 2, 0)*/, 0.5f);
                 CurrentTile = 5;
 
             }
 
             else
-                iTween.MoveTo(Player, Tiles[--CurrentTile].transform.position + new Vector3(0, 2, 0), 0.5f);
+                iTween.MoveTo(Player, Tiles[--CurrentTile].transform.position /*+ new Vector3(0, 2, 0)*/, 0.5f);
 
             AttackTime = AttackCD;
             DodgeTime = Evasion;
