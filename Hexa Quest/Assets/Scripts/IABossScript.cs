@@ -54,7 +54,7 @@ public class IABossScript : MonoBehaviour {
 
                 TileToAttack = k;
 
-                Tiles[k].GetComponent<Renderer>().material.color = Color.red;
+                Tiles[k].GetComponent<Renderer>().material.color = Color.Lerp(Color.red, Color.white, TimeAttacking);
                 if (TimeAttacking <= 0)
                 {
                     if (Player.transform.position == Tiles[k].transform.position)
