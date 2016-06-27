@@ -79,7 +79,7 @@ public class LevelScript : MonoBehaviour
         {
             AttackTime -= Time.deltaTime;
             DodgeTime -= Time.deltaTime;
-            if (AttackTime < 0 || Input.GetKeyDown(KeyCode.Space))
+            if (/*AttackTime < 0 ||*/ Input.GetKeyDown(KeyCode.Space))
             {
                 if (Boss)
                 {

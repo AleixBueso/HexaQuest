@@ -15,6 +15,9 @@ public class IABossScript : MonoBehaviour {
     public GameObject[] Tiles;
     int RandomAttack = 0;
 
+    public GameObject[] Hearts;
+    uint HeartsNum = 2;
+
     private ArrayList Attacks;
     bool[] attack;
 
@@ -49,8 +52,11 @@ public class IABossScript : MonoBehaviour {
                 uint i = 0;
                 uint k = 0;
                 while (i < Tiles.Length)
-                    if (TargetAttack.transform == Tiles[i++].transform)
+                {
+                    if (TargetAttack.transform == Tiles[i].transform)
                         k = i;
+                    i++;
+                }
 
                 TileToAttack = k;
 
@@ -59,8 +65,9 @@ public class IABossScript : MonoBehaviour {
                 {
                     if (Player.transform.position == Tiles[k].transform.position)
                     {
-                        //FlotatingDamageControllerScript.CreateFloatingText("4", Player.transform);
                         Debug.Log("Boss hit you!");
+                        iTween.ShakePosition(Player, new Vector3(1, 1, 1), 0.2f);
+                        Destroy(Hearts[HeartsNum--]);
                     }
 
                     TimeWaiting = TimeToAttack;
