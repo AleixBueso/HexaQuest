@@ -24,7 +24,7 @@ public class LevelScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
+        Player.transform.position = Tiles[0].transform.position;
         FlotatingDamageControllerScript.Initialize();
         HealthBar.value = BossHP;
         AttackTime = AttackCD;

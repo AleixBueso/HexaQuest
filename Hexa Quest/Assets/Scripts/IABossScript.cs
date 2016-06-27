@@ -43,7 +43,6 @@ public class IABossScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
         if (Boss)
         {
             if (TimeWaiting <= 0)
