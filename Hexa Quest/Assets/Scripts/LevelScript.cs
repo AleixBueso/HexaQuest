@@ -10,12 +10,18 @@ public class LevelScript : MonoBehaviour
     float AttackTime;
     float DodgeTime;
     public int PlayerDamage;
+    public GameObject Boss;
     public int BossDamage;
     public int BossHP;
+    public float BossEvasion;
+    float BossReactionTime;
     public GameObject Player;
-    public GameObject Boss;
     public Slider HealthBar;
     public Text CurrentHealth;
+   
+
+    bool MoveRight = false;
+    bool MoveLeft = false;
 
     //Tiles Logic
     public GameObject[] Tiles;
@@ -29,6 +35,7 @@ public class LevelScript : MonoBehaviour
         HealthBar.value = BossHP;
         AttackTime = AttackCD;
         DodgeTime = Evasion;
+        BossReactionTime = BossEvasion;
     }
 
     // Update is called once per frame
@@ -50,6 +57,7 @@ public class LevelScript : MonoBehaviour
             DodgeTime = Evasion;
 
             Debug.Log(CurrentTile);
+            MoveRight = true;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && DodgeTime <= 0)
@@ -71,6 +79,7 @@ public class LevelScript : MonoBehaviour
             DodgeTime = Evasion;
 
             Debug.Log(CurrentTile);
+            MoveLeft = true;
         }
 
        
@@ -96,5 +105,22 @@ public class LevelScript : MonoBehaviour
         {
             Destroy(Boss.gameObject);
         }
+
+        if (MoveRight && BossReactionTime <= 0)
+        {
+            iTween.RotateAdd(Boss, new Vector3(0, - 60, 0), 0.8f);
+            MoveRight = false;
+            BossReactionTime = BossEvasion;
+        }
+
+        else if (MoveLeft && BossReactionTime <= 0)
+        {
+            iTween.RotateAdd(Boss, new Vector3(0, 60, 0), 0.8f);
+            MoveLeft = false;
+            BossReactionTime = BossEvasion;
+        }
+
+        else
+            BossReactionTime -= Time.deltaTime;
     }
 }
