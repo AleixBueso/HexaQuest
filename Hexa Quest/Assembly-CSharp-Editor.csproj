@@ -67,7 +67,7 @@
      <None Include="Assets\Quantum Theory\Polyworld\Shaders\VertexColors\IBL\QT_Cubemaps.cginc" />
      <None Include="Assets\Quantum Theory\Polyworld\Shaders\VertexColors\IBL\VertexColorsUnity5_Linear.shader" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>/Users/JanNafta/GitHub/HexaQuest/Hexa Quest/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>/Users/JanNafta/Documents/HexaQuest/Hexa Quest/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>

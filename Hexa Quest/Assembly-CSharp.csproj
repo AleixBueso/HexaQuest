@@ -45,17 +45,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\PlayerMovementScript.cs" />
+     <Compile Include="Assets\BossGooScript.cs" />
      <Compile Include="Assets\Quantum Theory\Polyworld\Scripts\QT_InteractContainer.cs" />
      <Compile Include="Assets\Quantum Theory\Polyworld\Scripts\QT_LightFlicker.cs" />
      <Compile Include="Assets\Quantum Theory\Polyworld\Scripts\QT_RenderBaseMap.cs" />
      <Compile Include="Assets\Quantum Theory\Polyworld\Scripts\QT_SurfaceNoise.cs" />
      <Compile Include="Assets\Quantum Theory\Polyworld\Scripts\Utility Scripts\MeshCombineUtility.cs" />
      <Compile Include="Assets\Quantum Theory\Polyworld\Scripts\Utility Scripts\QT_MeshCombineUtility.cs" />
+     <Compile Include="Assets\Scripts\ChangeLevel.cs" />
      <Compile Include="Assets\Scripts\FlotatingDamageControllerScript.cs" />
      <Compile Include="Assets\Scripts\FlotatingDamageScript.cs" />
      <Compile Include="Assets\Scripts\HealthBarScript.cs" />
+     <Compile Include="Assets\Scripts\IABossScript.cs" />
      <Compile Include="Assets\Scripts\LevelScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovementScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <None Include="Assets\Quantum Theory\Polyworld\Shaders\VertexColors\IBL\VertexColorsIBLDiffuse.shader" />
      <None Include="Assets\Quantum Theory\Polyworld\Shaders\VertexColors\IBL\VertexColorsIBLDiffuseTex.shader" />
